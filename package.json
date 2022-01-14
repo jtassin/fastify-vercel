@@ -1,0 +1,31 @@
+{
+  "name": "fastify-vercel",
+  "version": "1.0.0",
+  "dependencies": {
+    "@keplr/typed-ajv": "^3.0.1",
+    "fastify": "^3.18.0",
+    "fastify-plugin": "^3.0.0",
+    "mongodb": "^4.3.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node build/index.js",
+    "lint": "eslint src",
+    "test": "jest --verbose src",
+    "start:dev": "ts-node src/index.ts",
+    "start:vercel": "vercel dev",
+    "dev": "PORT=3333 MONGO_URI=mongodb://localhost:27017/test ts-node src/index.ts"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.5",
+    "@babel/preset-typescript": "^7.14.5",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.4",
+    "@typescript-eslint/eslint-plugin": "^4.27.0",
+    "@typescript-eslint/parser": "^4.27.0",
+    "@vercel/node": "^1.11.1",
+    "eslint": "^7.29.0",
+    "jest": "^27.0.4",
+    "typescript": "^4.3.4"
+  }
+}
